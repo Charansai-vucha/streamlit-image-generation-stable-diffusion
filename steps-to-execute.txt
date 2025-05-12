@@ -1,0 +1,19 @@
+# Step 1: Open Google Colab and create a new notebook.
+
+# Step 2: Enable GPU support:
+# Runtime -> Change runtime type -> Select GPU
+
+# Step 3: Install the required packages:
+!pip install torch torchvision torchaudio diffusers transformers accelerate Pillow streamlit
+
+# Step 4: Write the Streamlit app code to a file:
+%%writefile image_generation_app.py
+# [Paste code from main.py here]
+
+# Step 5: Start the Streamlit app with localtunnel for public access:
+!wget -q -O - ipv4.icanhazip.com
+!streamlit run image_generation_app.py & npx localtunnel --port 8501
+
+# Step 6: Copy the public URL printed by localtunnel and open it in a new browser tab to access the app.
+
+# Note: Keep the Colab notebook running to maintain the app session.
